@@ -1,0 +1,65 @@
+引用:reference
+   String s;  //创建了一个String引用，但这个引用并没有对象与之关联
+   String s = "St"; //创建一个引用，并进行初始化。字符串可以用带引号的文本初始化。
+
+对象:Object
+   String s = new String("St"); //new关键字创建了对象，这个语句不仅创建了对象，还进行了字符串的初始化。
+
+程序运行时数据的存储:
+   1:寄存器--最快的存储区，位于处理器内部
+   2:堆栈--存放了对象引用(RAM区)
+   3:堆--存放所有的java对象(RAM区)
+   4:常量存储--ROM区
+   5:非RAM存储
+
+基本类型
+   不需要通过new来创建对象，变量可以直接存储“值”,并放于“堆栈”中,更加高效
+   
+类   class 
+   可以在类里面设置两种类型的元素：字段(数据成员)、方法(成员函数)
+
+eg:类DataOnly
+  class DataOnly{
+    int i;  //普通字段
+    double d;
+    boolean b;  
+  }
+创建这个类的对象
+   DataOnly dataOnly = new DataOnly();
+为这个类中的某些字段赋值
+   dataOnly.i=47;
+   
+若类的某个成员是基本数据类型，即使没有进行初始化，java也会它获取一个默认值。
+
+方法、参数、返回值
+方法只有通过对象才可以被调用。
+方法可以是有参的、无参的，可以是有返回值的，也可以是没有返回值的。
+
+构建一个java程序
+  1.名字可见性
+  2.运用其他构建，倒可用的包。
+  
+static关键字:即使从未创建过类的对象，但是仍可以通过类名去访问该类下的static方法或作用于。
+eg: class StaticTest{
+      static int i = 23;  //静态成员
+    }
+    
+    StaticTest st1 = new StaticTest();
+    StaticTest st2 = new StaticTest();
+
+其中st1.i与st2.i指向的是同一存储空间。并具有相同的值 23. 
+ 同样可以通过StaticTest.i拿到该变量的值23.
+
+静态方法的声明:
+  class Incremantable{
+    static void increment(){
+      StaticTest.i++;
+     }
+  }
+ 
+静态方法的调用:
+  1.Incrementable incrementable = new Incrementable();
+  incrementable.increment();
+  2.Incrementable.increment();
+ 
+ 编码风格很重要。

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="java-thinking Maven Webapp"
+  id="myeclipse.1511316785616"
+  context-root="/java-thinking"
+  j2ee-spec="1.7"
+  archive="java-thinking Maven Webapp.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
